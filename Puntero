@@ -1,0 +1,64 @@
+/*Los punteros en C son una de las características más
+  poderosas y fundamentales del lenguaje. Son variables
+  que almacenan la dirección de memoria de otra variable,
+  en lugar de su valor directamente.
+  
+ ¿Qué significa esto?
+ Imagina que una variable es una casa, y su dirección es
+ dónde está ubicada. Un puntero no guarda lo que hay
+ dentro de la casa, sino la dirección de esa casa.
+
+*/
+
+#include <stdio.h>
+
+int main() {
+  /*
+   * Aquí se define una variable llamada x del tipo entero la
+   * cual tiene un valor de 42
+   */
+    int x = 42;
+    int edad = 40;
+    /*
+     * ¿Cómo se define un puntero?
+     * puntero a un entero
+     * int *mi_puntero;
+     *
+     * int x = 10;      Variable normal
+     * int *mi_puntero; Definición de un puntero a entero
+     * mi_puntero = &x; El puntero guarda la dirección de x
+     *
+     * El operador * se llama operador de desreferenciación y
+     * permite acceder al valor almacenado en la dirección
+     * que apunta el puntero.
+     *
+     */
+    
+    
+
+    int *mi_puntero = &x;
+    int *edad_puntero = &edad;
+
+    printf("Valor de x: %d\n", x);
+//   
+    printf("Valor del  puntero (dirección): %p\n", mi_puntero);
+    //printf("Valor apuntado por mi_puntero: %d\n", *mi_puntero);
+
+    printf("-------------------------------------------------- \n");
+    printf("El valor de la edad es: %d \n", edad);
+    printf("La direccion de la variable edad es: %p \n", edad_puntero);
+
+    /*
+     * ¿Para qué sirven?
+     *
+     * - Pasar variables por referencia a funciones
+     *
+     * - Manipular arreglos y cadenas
+     *
+     * - Asignar memoria dinámicamente con malloc, calloc, etc.
+     *
+     * - Construir estructuras complejas como listas enlazadas, árboles, etc.
+     */
+
+    return 0;
+}
